@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details — Urbane &amp; Vessel</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar">
+    Complimentary doorstep delivery on orders above ₹2,000 &middot; Code: <span>FIRST10</span>
+  </aside>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-name">Urbane &amp; Vessel</span>
+        <span class="brand-sub">Artisanal Living &middot; Est. 2024</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link active">Shop All</a></li>
+          <li><a href="shop.html?category=ceramics" class="nav-link">Ceramics</a></li>
+          <li><a href="shop.html?category=textiles" class="nav-link">Linen &amp; Textiles</a></li>
+          <li><a href="about.html" class="nav-link">Our Story</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="shop.html" class="action-icon-btn" title="Search objects" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </a>
+        <a href="cart.html" class="action-icon-btn" title="View Bag" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-badge-count" style="display: none;">0</span>
+        </a>
+        <button class="mobile-toggle-btn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="container">
+    <nav class="breadcrumb-nav">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="shop.html">Shop</a>
+      <span>/</span>
+      <a href="shop.html" id="detail-breadcrumb-category">Category</a>
+      <span>/</span>
+      <span id="detail-breadcrumb-title" style="color: var(--text-main);">Product Name</span>
+    </nav>
+  </div>
+
+  <!-- Product Detail Section -->
+  <main class="container" style="padding-bottom: 5rem;">
+    <div class="product-detail-grid">
+      <!-- Media Gallery Stage -->
+      <div class="product-gallery-stage">
+        <div class="main-gallery-frame">
+          <img id="detail-main-img" src="" alt="Product Photo" />
+        </div>
+      </div>
+
+      <!-- Product Information & Order Actions -->
+      <div class="product-info-column">
+        <div class="product-meta-header">
+          <span class="product-badge badge-featured" id="detail-badge" style="display: none; position: static; margin-bottom: 0.8rem;">Badge</span>
+          <span class="subheading" id="detail-category" style="display: block;">Category</span>
+          <h1 id="detail-title" style="margin-bottom: 0.5rem;">Product Name</h1>
+
+          <div class="product-rating" style="margin-bottom: 0.8rem;">
+            <span class="stars" id="detail-stars">★★★★★</span>
+            <span id="detail-rating-val" style="font-weight: 600;">4.8</span>
+            <span id="detail-reviews-count" style="color: var(--text-light);">(34 verified reviews)</span>
+          </div>
+
+          <div class="detail-price-line">
+            <span class="detail-price" id="detail-price">₹0</span>
+            <span class="detail-original-price" id="detail-original-price" style="display: none;">₹0</span>
+            <span style="font-size: 0.78rem; color: var(--color-olive); font-weight: 600; background: var(--bg-subtle); padding: 3px 8px; border-radius: 4px;">In Stock &middot; Ready to Dispatch</span>
+          </div>
+        </div>
+
+        <p class="product-detail-desc" id="detail-desc">
+          Product description loading...
+        </p>
+
+        <!-- Product Specs Table -->
+        <table class="product-specs-table">
+          <tbody>
+            <tr>
+              <th>SKU Code</th>
+              <td id="detail-sku">UV-000</td>
+            </tr>
+            <tr>
+              <th>Craft Materials</th>
+              <td id="detail-materials">Natural Materials</td>
+            </tr>
+            <tr>
+              <th>Dimensions</th>
+              <td id="detail-dimensions">Standard Size</td>
+            </tr>
+            <tr>
+              <th>Care &amp; Wash</th>
+              <td>Hand wash with mild organic soap; air dry naturally away from direct scorching sun.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Purchase Action Controls -->
+        <div class="product-purchase-action">
+          <div class="qty-stepper">
+            <button class="qty-btn" id="qty-minus-btn" aria-label="Decrease quantity">−</button>
+            <input type="text" class="qty-input" id="detail-qty-input" value="1" readonly />
+            <button class="qty-btn" id="qty-plus-btn" aria-label="Increase quantity">+</button>
+          </div>
+
+          <button class="btn btn-terracotta" id="detail-add-to-bag-btn" style="flex-grow: 1; height: 48px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            Add to Shopping Bag
+          </button>
+        </div>
+
+        <!-- Trust Badges Row -->
+        <div class="trust-badges-row">
+          <div class="trust-badge-item">
+            <strong>Generational Guild</strong>
+            <span>Direct craft cluster</span>
+          </div>
+          <div class="trust-badge-item">
+            <strong>Plastic-Free</strong>
+            <span>Honey-comb kraft box</span>
+          </div>
+          <div class="trust-badge-item">
+            <strong>Peaceful Exchange</strong>
+            <span>7-day return guarantee</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Related Products -->
+    <div style="border-top: 1px solid var(--border-color); padding-top: 4rem;">
+      <div class="section-header">
+        <div>
+          <span class="subheading">Complementary Pieces</span>
+          <h2>You May Also Treasure</h2>
+        </div>
+        <a href="shop.html" class="btn btn-outline btn-sm">Explore More &rarr;</a>
+      </div>
+
+      <div class="products-grid" id="related-products-grid">
+        <!-- Rendered by product-detail.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">Urbane &amp; Vessel</span>
+          <p>Modern artisanal homeware designed for mindful living. Direct from traditional artisan clusters to your doorstep.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html">All Objects</a></li>
+            <li><a href="shop.html?category=ceramics">Stoneware Ceramics</a></li>
+            <li><a href="shop.html?category=textiles">Loom Woven Textiles</a></li>
+            <li><a href="shop.html?category=kitchenware">Kitchen Heirlooms</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Studio &amp; Care</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About The Brand</a></li>
+            <li><a href="cart.html">View Shopping Bag</a></li>
+            <li><a href="checkout.html">Checkout Simulator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Studio Atelier</h4>
+          <p style="font-size: 0.88rem; color: #9c9489; line-height: 1.6; margin-bottom: 0.8rem;">
+            Crafted with care in Alwar, Rajasthan &middot; Shipping across India &amp; Worldwide.
+          </p>
+          <span style="font-size: 0.78rem; color: #7d756a;">contact@urbaneandvessel.in</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024–2026 Urbane &amp; Vessel. Developed by Divyanshi Sharma (CSE-DS).</p>
+        <p>Built with Pure HTML5, CSS3, &amp; Vanilla JavaScript &middot; No external libraries.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product-detail.js"></script>
+</body>
+</html>
