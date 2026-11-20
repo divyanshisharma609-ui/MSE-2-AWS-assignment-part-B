@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Urbane &amp; Vessel — Handcrafted Homeware &amp; Living</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -266,45 +266,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/products.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    // Populate Homepage Featured Products (First 4 or Best Sellers)
-    document.addEventListener("DOMContentLoaded", () => {
-      const container = document.getElementById("homepage-featured-grid");
-      if (!container) return;
-      const featured = PRODUCTS.slice(0, 4);
-
-      container.innerHTML = featured.map(prod => `
-        <article class="product-card">
-          <div class="product-card-media">
-            <a href="product-detail.html?id=${prod.id}">
-              <img src="${prod.image}" alt="${prod.name}" loading="lazy" />
-            </a>
-            ${prod.badge ? `<span class="product-badge ${prod.badge.toLowerCase().includes('seller') ? 'badge-featured' : ''}">${prod.badge}</span>` : ''}
-            <button class="quick-add-btn" onclick="addToCart('${prod.id}', 1)">
-              Add to Bag
-            </button>
-          </div>
-          <div class="product-card-body">
-            <span class="product-category-tag">${prod.category}</span>
-            <h3 class="product-card-title">
-              <a href="product-detail.html?id=${prod.id}">${prod.name}</a>
-            </h3>
-            <div class="product-rating">
-              <span class="stars">★</span>
-              <span>${prod.rating}</span>
-              <span>(${prod.reviewsCount})</span>
-            </div>
-            <div class="product-price-row">
-              <span class="product-price">${formatCurrency(prod.price)}</span>
-              ${prod.originalPrice ? `<span class="product-original-price">${formatCurrency(prod.originalPrice)}</span>` : ''}
-            </div>
-          </div>
-        </article>
-      `).join("");
-    });
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
